@@ -16,6 +16,8 @@ group :assets do
   gem 'uglifier'
 end
 
+gem 'carrierwave'
+
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'RedCloth'
