@@ -1,4 +1,6 @@
 Demoapp::Application.routes.draw do
+  get "dashboard/index"
+
   devise_for :users, :path_names => { :sign_in => 'login', :sign_out => 'logout' }
   devise_scope :user do
     get '/login'          => 'devise/sessions#new',     :as => 'new_user_session'
