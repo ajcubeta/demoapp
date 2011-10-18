@@ -9,11 +9,27 @@
   </head>
   <body>
     <div id="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
-      <%= yield %>
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <%= link_to "Home", root_path %>
+            </li>
+          </ul>
+        </nav>
+        <section id="user_nav">
+          <%= link_status(current_user)%>
+        </section>
+      </header>
+      <div style="clear: both;"></div>
+      <div>
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <% end %>
+        <%= content_tag :h1, yield(:title) if show_title? %>
+        <%= yield %>
+        <%#= debug current_user %>
+      </div>
     </div>
   </body>
 </html>

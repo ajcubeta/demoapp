@@ -21,9 +21,9 @@ gem 'jquery-rails'
 gem 'RedCloth'
 
 gem 'devise'
-gem "nifty-generators"
 gem 'postmark-rails'
 gem 'time_diff'
+gem "nifty-generators", :group => :development
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -44,3 +44,4 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
 end
+gem "mocha", :group => :test
