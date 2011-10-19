@@ -16,7 +16,8 @@ group :assets do
   gem 'uglifier'
 end
 
-gem "rmagick"
+# gem "rmagick"
+gem "mini_magick"
 gem "carrierwave"
 # You don't have the 'fog' gem installed. The 'aws', 'aws-s3' and 'right_aws' gems are no longer supported.
 gem 'fog'
