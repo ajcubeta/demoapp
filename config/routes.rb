@@ -23,6 +23,9 @@ Demoapp::Application.routes.draw do
   resources :galleries
   resources :paintings
 
+  # Backbone Demo
+  resources :tasks
+
   # # Users
   # resources :users do
   #   member do
