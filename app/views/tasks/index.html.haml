@@ -1,2 +1,8 @@
 %h1 Tasks#index
 %p Find me in app/views/tasks/index.html.haml
+
+<%= content_for :javascript do -%>
+  <%= javascript_tag do %>
+    ExampleApp.init(<%== @tasks.to_json %>);
+  <% end %>
+<% end -%>
